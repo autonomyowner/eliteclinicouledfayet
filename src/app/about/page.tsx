@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "À propos - Harmony Clinic",
+  title: "About - Elite Dental Clinic",
 };
 
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
-import { Crown, Shield, Star, Clock, Users } from "lucide-react";
+import { Crown, Shield, Star, Clock, Users, Phone, MapPin } from "lucide-react";
 import type { ReactElement } from "react";
 
 const stats = [
@@ -37,45 +37,55 @@ export default function AboutPage(): ReactElement {
   return (
     <>
       {/* Hero Section */}
-      <div 
-        className="relative min-h-screen w-full -mt-20 pt-20"
-        style={{
-          backgroundImage: 'url(/page2.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        
-        <Section className="relative overflow-hidden min-h-screen flex items-center bg-transparent">
+      <Section className="relative min-h-screen bg-background pt-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-background-secondary via-background to-accent-burgundy-dark/10" />
         
         <Container>
-          <div className="relative z-10 max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-screen">
             <Reveal>
-              <div className="mb-8">
-                <span className="luxury-card px-6 py-3 text-accent-primary bg-white/90 text-sm font-semibold tracking-widest uppercase">
-                  Excellence Dentaire
-                </span>
+              <div className="space-y-8">
+                <div className="mb-8">
+                  <span className="luxury-card px-6 py-3 text-accent-primary bg-white/10 text-sm font-semibold tracking-widest uppercase">
+                    Excellence Dentaire
+                  </span>
+                </div>
+                
+                <h1 className="mafia-heading text-6xl sm:text-7xl lg:text-8xl text-white leading-[0.9] mb-8">
+                  <span className="block">ELITE</span>
+                  <span className="block text-accent-primary">DENTAL</span>
+                </h1>
+                
+                <p className="text-2xl sm:text-3xl text-white/90 max-w-3xl leading-relaxed font-light">
+                  Depuis 2016, nous redéfinissons les soins dentaires à Alger. 
+                  <span className="text-accent-primary-light font-medium"> Une expertise reconnue au service de votre sourire.</span>
+                </p>
               </div>
             </Reveal>
             
-            <Reveal delay={200}>
-              <h1 className="mafia-heading text-6xl sm:text-7xl lg:text-8xl text-white leading-[0.9] mb-8">
-                <span className="block">CLINIQUE</span>
-                <span className="block text-accent-primary">HARMONY</span>
-              </h1>
-            </Reveal>
-            
-            <Reveal delay={400}>
-              <p className="text-2xl sm:text-3xl text-white/90 max-w-3xl leading-relaxed font-light">
-                Depuis 2016, nous redéfinissons les soins dentaires à Alger. 
-                <span className="text-accent-primary-light font-medium"> Une expertise reconnue au service de votre sourire.</span>
-              </p>
+            <Reveal delay={300}>
+              <div className="relative">
+                <div className="luxury-card rounded-3xl overflow-hidden aspect-[4/5] relative group shadow-2xl"
+                     style={{
+                       backgroundImage: 'url(/herroo.jpg)',
+                       backgroundSize: 'cover',
+                       backgroundPosition: 'center',
+                       backgroundRepeat: 'no-repeat'
+                     }}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/30 via-transparent to-black/50" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <h3 className="mafia-heading text-3xl text-white mb-2">Excellence Clinique</h3>
+                    <p className="text-white/90 text-lg">Soins dentaires de prestige</p>
+                  </div>
+                  <div className="absolute top-8 right-8">
+                    <Crown className="w-10 h-10 text-accent-primary" />
+                  </div>
+                </div>
+              </div>
             </Reveal>
           </div>
         </Container>
-        </Section>
-      </div>
+      </Section>
 
       {/* Stats Section */}
       <Section className="relative bg-background-secondary">
@@ -120,7 +130,7 @@ export default function AboutPage(): ReactElement {
                 
                 <div className="space-y-6 text-lg text-white/85 leading-relaxed">
                   <p>
-                    Au cœur d&apos;Alger, Harmony Clinic s&apos;est imposée comme une référence 
+                    Au cœur d&apos;Alger, Elite Dental Clinic s&apos;est imposée comme une référence 
                     en soins dentaires d&apos;excellence depuis 2016.
                   </p>
                   <p>
@@ -136,16 +146,61 @@ export default function AboutPage(): ReactElement {
             </Reveal>
             
             <Reveal delay={300}>
-              <div className="relative">
-                <div className="luxury-card rounded-2xl overflow-hidden aspect-[4/5] relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-background-tertiary to-accent-primary-light/10" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-8 left-8 right-8">
-                    <h3 className="mafia-heading text-2xl text-white mb-2">Équipements d&apos;Exception</h3>
-                    <p className="text-white/80 text-sm">Technologies modernes et matériel de pointe</p>
+              <div className="space-y-8">
+                {/* Doctor Card */}
+                <div className="luxury-card rounded-2xl overflow-hidden relative group shadow-xl">
+                  <div className="aspect-[4/3] relative"
+                       style={{
+                         backgroundImage: 'url(/dr.jpg)',
+                         backgroundSize: 'cover',
+                         backgroundPosition: 'center top',
+                         backgroundRepeat: 'no-repeat'
+                       }}>
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/20 via-transparent to-black/50" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <h3 className="mafia-heading text-2xl text-white mb-2">Dr. Raout Ladjali</h3>
+                      <p className="text-accent-primary-light text-lg font-medium mb-2">Chirurgien-Dentiste</p>
+                      <p className="text-white/90 text-sm mb-4">Expert en soins dentaires d&apos;excellence</p>
+                      <div className="flex items-center text-white/80">
+                        <Phone className="w-4 h-4 mr-2 text-accent-primary" />
+                        <span className="text-sm font-medium">0553 54 72 42</span>
+                      </div>
+                    </div>
+                    <div className="absolute top-6 right-6">
+                      <Crown className="w-8 h-8 text-accent-primary" />
+                    </div>
                   </div>
-                  <div className="absolute top-8 right-8">
-                    <Crown className="w-8 h-8 text-accent-primary" />
+                </div>
+
+                {/* Google Maps Card */}
+                <div className="luxury-card rounded-2xl overflow-hidden relative group shadow-xl bg-gradient-to-br from-accent-gold/20 to-accent-burgundy-dark/30 border border-accent-gold/30">
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <MapPin className="w-6 h-6 text-accent-gold mr-3" />
+                      <h3 className="mafia-heading text-xl text-accent-gold">Notre Localisation</h3>
+                    </div>
+                    <div className="aspect-video rounded-lg overflow-hidden mb-4 border border-accent-gold/20">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.9898756!2d3.0885!3d36.7538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzYuNzUzOCwgMy4wODg1!5e0!3m2!1sen!2sdz!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="filter saturate-150 contrast-110"
+                      />
+                    </div>
+                    <a 
+                      href="https://maps.app.goo.gl/mbUWiiDYRgwHDbCe7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-accent-gold hover:text-accent-primary transition-colors duration-300 text-sm font-medium"
+                    >
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Voir sur Google Maps
+                    </a>
                   </div>
                 </div>
               </div>

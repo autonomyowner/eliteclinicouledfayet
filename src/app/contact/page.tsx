@@ -57,18 +57,20 @@ function ContactInner(): ReactElement {
     <div 
       className="min-h-screen w-full relative -mt-20 pt-20"
       style={{
-        backgroundImage: 'url(/aboutback.jpg)',
+        backgroundImage: 'url(/heroima.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Removed dark overlay for brighter background */}
+      {/* Enhanced overlay with gold gradient for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-accent-gold/10 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-accent-gold/20 via-transparent to-black/30" />
       
       {/* Hero Section */}
       <Section className="relative overflow-hidden pt-32 pb-20">
-        {/* Removed gradient overlay for brighter background */}
+        {/* Gold gradient overlay already applied above */}
         
         <Container>
           <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -99,7 +101,7 @@ function ContactInner(): ReactElement {
 
       {/* Contact Methods */}
       <Section className="relative">
-        {/* Removed dark overlay for brighter background */}
+        {/* Background overlay for consistent styling */}
         
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">

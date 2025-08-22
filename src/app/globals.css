@@ -1,25 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --background-secondary: #f8f9fa;
-  --background-tertiary: #e9ecef;
-  --accent-primary: #2c5aa0;
-  --accent-primary-light: #4a7bc8;
-  --accent-primary-dark: #1a3d7a;
-  --accent-secondary: #00b4d8;
-  --accent-secondary-dark: #0077b6;
-  --accent-success: #198754;
-  --accent-text: #333333;
-  --accent-text-light: #6c757d;
-  --accent-border: #dee2e6;
-  --text-muted: #6c757d;
-  --text-light: #adb5bd;
-  --glass-bg: rgba(255, 255, 255, 0.9);
-  --glass-border: rgba(44, 90, 160, 0.15);
-  --shadow-primary: rgba(44, 90, 160, 0.2);
-  --shadow-dark: rgba(0, 0, 0, 0.15);
+  --background: #1a2332;
+  --foreground: #f8f6f0;
+  --background-secondary: #243142;
+  --background-tertiary: #2e3f56;
+  --accent-primary: #d4af37;
+  --accent-primary-light: #e6c75a;
+  --accent-primary-dark: #b8941f;
+  --accent-secondary: #8b4513;
+  --accent-secondary-dark: #6b3410;
+  --accent-success: #22c55e;
+  --accent-text: #f8f6f0;
+  --accent-text-light: #e8e6e1;
+  --accent-border: #4a5568;
+  --text-muted: #a0aec0;
+  --text-light: #e2e8f0;
+  --glass-bg: rgba(36, 49, 66, 0.85);
+  --glass-border: rgba(212, 175, 55, 0.25);
+  --shadow-primary: rgba(212, 175, 55, 0.4);
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+  --accent-gold: #d4af37;
+  --accent-burgundy: #8b4513;
+  --accent-burgundy-dark: #6b3410;
+  --accent-smoke: #718096;
+  --accent-steel: #4a5568;
+  --marble-light: #e8e6e1;
+  --marble-dark: #d4d1cc;
+  --navy-deep: #1a2332;
+  --mahogany: #8b4513;
 }
 
 @theme inline {
@@ -42,35 +51,71 @@
   --color-glass-border: var(--glass-border);
   --color-shadow-primary: var(--shadow-primary);
   --color-shadow-dark: var(--shadow-dark);
-  --font-sans: "Montserrat Alternates", var(--font-geist-sans), system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-playfair);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-burgundy: var(--accent-burgundy);
+  --color-accent-burgundy-dark: var(--accent-burgundy-dark);
+  --color-accent-smoke: var(--accent-smoke);
+  --color-accent-steel: var(--accent-steel);
+  --color-marble-light: var(--marble-light);
+  --color-marble-dark: var(--marble-dark);
+  --color-navy-deep: var(--navy-deep);
+  --color-mahogany: var(--mahogany);
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-display: var(--font-cinzel), "Trajan Pro", "Times New Roman", serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Montserrat Alternates", var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-serif);
   background-image: 
-    radial-gradient(circle at 20% 20%, rgba(44, 90, 160, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(0, 180, 216, 0.02) 0%, transparent 40%),
-    linear-gradient(135deg, rgba(248, 249, 250, 0.5) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(74, 123, 200, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
+    linear-gradient(135deg, rgba(26, 31, 46, 0.3) 0%, transparent 50%);
 }
 
-.lux-heading {
-  font-family: var(--font-playfair), serif;
-  letter-spacing: -0.02em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.mafia-heading {
-  font-family: var(--font-playfair), serif;
-  font-weight: 700;
-  letter-spacing: -0.035em;
+/* Elegant clinic name typography */
+.clinic-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.8),
-    0 4px 8px rgba(255, 215, 0, 0.1),
-    0 8px 16px rgba(0, 0, 0, 0.6);
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(212, 175, 55, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
+
+/* Hero and main headings - Ultra luxury */
+.hero-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.8),
+    0 8px 16px rgba(212, 175, 55, 0.2),
+    0 16px 32px rgba(0, 0, 0, 0.6);
+  line-height: 0.9;
+}
+
+/* Secondary headings - Refined elegance */
+.mafia-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 4px 8px rgba(212, 175, 55, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Body text and descriptions */
+.elegant-text {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
 }
 
 .glass-morphism {
@@ -146,16 +191,16 @@ body {
 
 .luxury-card {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(248, 249, 250, 0.9) 25%, 
-    rgba(233, 236, 239, 0.85) 75%, 
-    rgba(255, 255, 255, 0.9) 100%);
+    rgba(26, 31, 46, 0.95) 0%, 
+    rgba(37, 45, 66, 0.9) 25%, 
+    rgba(51, 65, 85, 0.85) 75%, 
+    rgba(26, 31, 46, 0.9) 100%);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(44, 90, 160, 0.15);
+  border: 1px solid rgba(74, 123, 200, 0.2);
   box-shadow: 
-    0 4px 16px rgba(0, 0, 0, 0.08),
-    0 8px 32px rgba(44, 90, 160, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    0 8px 32px rgba(74, 123, 200, 0.1),
+    inset 0 1px 0 rgba(116, 136, 201, 0.1);
 }
 
 .smoke-text {
@@ -164,8 +209,8 @@ body {
 }
 
 .golden-accent {
-  color: var(--accent-primary);
-  text-shadow: 0 0 10px rgba(44, 90, 160, 0.3);
+  color: var(--accent-gold);
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
 .steel-accent {
@@ -190,20 +235,22 @@ input,
 select, 
 textarea {
   color: var(--accent-text) !important;
-  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-color: rgba(37, 45, 66, 0.8) !important;
+  border: 1px solid rgba(74, 123, 200, 0.2) !important;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
   color: var(--accent-text) !important;
-  background-color: rgba(255, 255, 255, 1) !important;
+  background-color: rgba(37, 45, 66, 0.9) !important;
+  border-color: rgba(245, 158, 11, 0.5) !important;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--accent-text-light) !important;
-  opacity: 0.7;
+  color: var(--text-muted) !important;
+  opacity: 0.8;
 }
 
 /* Ensure glass morphism forms have visible text */
@@ -211,13 +258,14 @@ textarea::placeholder {
 .glass-morphism select,
 .glass-morphism textarea {
   color: var(--accent-text) !important;
-  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-color: rgba(37, 45, 66, 0.8) !important;
 }
 
 .glass-morphism input:focus,
 .glass-morphism select:focus,
 .glass-morphism textarea:focus {
-  background-color: rgba(255, 255, 255, 1) !important;
+  background-color: rgba(37, 45, 66, 0.9) !important;
+  border-color: rgba(245, 158, 11, 0.5) !important;
 }
 
 .booking-service-card {

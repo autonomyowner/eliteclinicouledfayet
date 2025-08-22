@@ -22,9 +22,9 @@ export default function Navbar(): ReactElement {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" aria-label="Primary">
         <div className="flex items-center gap-3">
           <Link href="/" className="group flex items-center gap-3">
-            <Crown className="w-7 h-7 text-accent-primary group-hover:rotate-12 transition-transform duration-300" />
-            <span className="mafia-heading text-2xl text-accent-primary tracking-wide group-hover:text-accent-primary-light transition-colors duration-300">
-              Harmony Clinic
+            <Crown className="w-8 h-8 text-accent-primary group-hover:rotate-12 transition-transform duration-300" />
+            <span className="clinic-name text-2xl text-accent-primary group-hover:text-accent-primary-light transition-colors duration-300">
+              Elite Dental Clinic
             </span>
           </Link>
         </div>

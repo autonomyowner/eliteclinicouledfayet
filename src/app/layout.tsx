@@ -1,39 +1,39 @@
 import type { Metadata } from "next";
-// import { JetBrains_Mono, Playfair_Display } from "next/font/google";
+import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 import { siteConfig } from "@/config/site";
 
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cinzel",
+  display: "swap",
+});
 
-// const jetBrainsMono = JetBrains_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-//   fallback: ["ui-monospace", "Menlo", "Monaco", "Consolas", "monospace"],
-//   display: "swap",
-// });
-
-// const playfair = Playfair_Display({
-//   variable: "--font-playfair",
-//   subsets: ["latin"],
-//   fallback: ["Georgia", "Times New Roman", "serif"],
-//   display: "swap",
-// });
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} — Clinique Dentaire`,
+    default: `${siteConfig.name} — Dental Clinic`,
     template: `%s — ${siteConfig.name}`,
   },
-  description: "Clinique dentaire moderne à Alger. Soins dentaires de qualité, orthodontie, implants, esthétique dentaire. Prise de rendez-vous en ligne.",
+  description: "Cabinet dentaire d'exception à Alger. Soins de luxe dans un cadre raffiné : orthodontie invisible, implantologie avancée, esthétique dentaire premium.",
   metadataBase: new URL(siteConfig.baseUrl),
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${siteConfig.name} — Clinique Dentaire`,
+    title: `${siteConfig.name} — Dental Clinic`,
     description:
-      "Clinique dentaire moderne à Alger. Soins dentaires de qualité, orthodontie, implants, esthétique dentaire. Prise de rendez-vous en ligne.",
+      "Cabinet dentaire d'exception à Alger. Soins de luxe dans un cadre raffiné : orthodontie invisible, implantologie avancée, esthétique dentaire premium.",
     url: "/",
     siteName: siteConfig.name,
     type: "website",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Clinique Dentaire`,
+    title: `${siteConfig.name} — Dental Clinic`,
     description:
-      "Clinique dentaire moderne à Alger. Soins dentaires de qualité, orthodontie, implants, esthétique dentaire. Prise de rendez-vous en ligne.",
+      "Cabinet dentaire d'exception à Alger. Soins de luxe dans un cadre raffiné : orthodontie invisible, implantologie avancée, esthétique dentaire premium.",
   },
 };
 
@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${cinzel.variable} ${cormorant.variable}`}>
       <body className="antialiased pt-20">
         <Navbar />
         <main>{children}</main>

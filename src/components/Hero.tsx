@@ -21,8 +21,9 @@ export default function Hero(): ReactElement {
         }}
       >
         
-        {/* Enhanced overlay for better text readability under transparent header */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/30" />
+        {/* Enhanced overlay with gold gradient for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-accent-gold/10 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-accent-gold/20 via-transparent to-black/30" />
         
         <Container>
           <motion.div 
@@ -38,34 +39,37 @@ export default function Hero(): ReactElement {
               className="mb-8"
             >
               <span className="inline-block px-6 py-3 luxury-card text-accent-primary text-sm font-semibold tracking-widest uppercase">
-                CLINIQUE DENTAIRE MODERNE
+                ELITE DENTAL CLINIC
               </span>
             </motion.div>
             
             <motion.h1 
-              className="mafia-heading text-5xl sm:text-7xl lg:text-8xl text-accent-text tracking-tight leading-[0.85] mb-10"
+              className="hero-heading text-5xl sm:text-7xl lg:text-8xl text-accent-text leading-[0.85] mb-10"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
               <span className="block relative">
-                CLINIQUE
+                ELITE
                 <div className="absolute -inset-2 bg-gradient-to-r from-accent-primary/5 via-transparent to-accent-primary/5 blur-xl" />
               </span>
-              <span className="block golden-accent text-4xl sm:text-6xl lg:text-7xl font-light italic mt-2">
-                Harmony
+              <span className="block golden-accent text-4xl sm:text-6xl lg:text-7xl font-medium italic mt-2">
+                Dental
+              </span>
+              <span className="block text-3xl sm:text-5xl lg:text-6xl font-normal text-accent-text-light mt-1">
+                Excellence
               </span>
             </motion.h1>
             
             <motion.p 
-              className="text-xl sm:text-2xl text-accent-text-light max-w-3xl leading-relaxed mb-14 font-light"
+              className="elegant-text text-xl sm:text-2xl text-accent-text-light max-w-3xl leading-relaxed mb-14"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              Orthodontie, soins dentaires et esthétique du sourire à Alger. 
+              Cabinet dentaire d&apos;exception offrant des soins de luxe dans un cadre raffiné à Alger.
               <br className="hidden sm:block" />
-              <span className="golden-accent font-medium">Expertise reconnue. Technologies modernes. Résultats exceptionnels.</span>
+              <span className="golden-accent font-medium">L&apos;Excellence Dentaire à l&apos;Algérienne</span>
             </motion.p>
             
             <motion.div 
